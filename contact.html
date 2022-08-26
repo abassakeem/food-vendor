@@ -1,0 +1,132 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap" rel="stylesheet">
+    
+<link rel="shortcut icon" href="../images/Screenshot (70).png">
+<link rel="stylesheet" href="../css/style.css"> 
+
+</head>
+<body >
+   
+    <div class="order">
+        <p>Need help placing an order? Call: <a class="order_number" href="tel:08149792483">08149792483📞</a></p>
+    </div>
+    <div class="header header-contact" id="header">
+        
+       <div class="navbar">
+           
+           
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="logo" onClick="goToHomePage()">GROUP TEN </li>
+                <li class="dropdown nav-dropdown nav-link"><img class="img-btn dropbtn1" onclick="myFunction()" src="../images/icons8-menu.svg"></li>
+                <div id="myDropdown1" class="dropdown-content1">
+                    <li class="nav-link"><a href = "index.html" active>HOME</a></li>
+                    <li class="nav-link"><a href = "#">ORDER</a></li>
+                    <li class="nav-link dropdown"><a  onclick="myFunction()" class=" dropbtn" href = "#">MENU<img class="drop-down-image" src="../images/drop-down-arrow.png"></a>
+                        <div id="myDropdown" class="dropdown-content">
+                        
+                            <a href="#" class="dropdown-element show">APPETIZER</a><br>
+                            <a href="#" class="dropdown-element show">MAIN COURSE</a><br>
+                            <a href="#" class="dropdown-element show">DESSERT</a>
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="nav-link"><a href = "#">ABOUT US</a></li>
+                    <li class="nav-link"><a href = "contact.html">CONTACT</a></li>
+                    <li class="nav-link"><a href = "#">BLOG</a></li>
+                    <div class="login-btn-div">
+                        <li class="nav-button"><button onClick="goToLoginPage()"> lOG IN/ SIGN UP </button></li>
+                    </div>
+                    </div>
+            </ul>
+        </div>
+        
+       </div>
+       <div class="last-contact">
+        <div class="whole-contact-body">
+            
+            <div class="contact">
+                <div class="phone-numbers">
+                    <h3>Give us a call</h3>
+                    <p>+234 14 979 2483</p>
+                    <p>+234 14 979 2483</p>
+                    <p>+234 14 979 2483</p>
+                </div>
+                <div class="note">
+                    <h3>Leave us a note</h3>
+                    <form>
+                        <input type="text" placeholder="Your name(required)" required class="names">
+                        <input type="text" placeholder="Your Email(required)" required class="email">
+                        <br>
+                        <textarea rows="20" cols="77" placeholder="your message"></textarea>
+                        <br>
+                        <button type="button" class="submit-btn send-btn">send</button>
+                    </form>
+                </div>
+                <div class="drink">
+                    <h3>Come for a drink</h3>
+                    <p>We are located directly opposite the place  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+        <p><small>
+            © 2021
+            copyright group 10 csb</small></p>
+    </div>
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown1").classList.toggle("show");
+        }
+        function goToLoginPage(){
+            window.location="loginpage.html";
+        }
+        function goToHomePage(){
+            window.location="index.html";
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn1')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content1");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        var load = document.getElementById("loading");
+        function loadfun(){
+            load.style.display = "none";
+        }
+        </script>
+        
+        </body>
+        </html>
+        

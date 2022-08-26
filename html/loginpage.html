@@ -1,0 +1,166 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap" rel="stylesheet">
+    
+<link rel="shortcut icon" href="../images/Screenshot (70).png">
+<link rel="stylesheet" href="../css/style.css"> 
+
+</head>
+<body class="login-body">
+   
+    <div class="order">
+        <p>Need help placing an order? Call: <a class="order_number" href="tel:08149792483">08149792483📞</a></p>
+    </div>
+    <div class="header" id="header">
+        
+       <div class="navbar">
+           
+           
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="logo" onClick="goToHomePage()" >GROUP TEN </li>
+                <li class="dropdown nav-dropdown nav-link"><img class="img-btn dropbtn1" onclick="myFunction()" src="../images/icons8-menu.svg"></li>
+                <div id="myDropdown1" class="dropdown-content1">
+                    <li class="nav-link"><a href = "index.html" active>HOME</a></li>
+                    <li class="nav-link"><a href = "#">ORDER</a></li>
+                    <li class="nav-link dropdown"><a  onclick="myFunction()" class=" dropbtn" href = "#">MENU<img class="drop-down-image" src="../images/drop-down-arrow.png"></a>
+                        <div id="myDropdown" class="dropdown-content">
+                        
+                            <a href="#" class="dropdown-element show">APPETIZER</a><br>
+                            <a href="#" class="dropdown-element show">MAIN COURSE</a><br>
+                            <a href="#" class="dropdown-element show">DESSERT</a>
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="nav-link"><a href = "#">ABOUT US</a></li>
+                    <li class="nav-link"><a href = "contact.html">CONTACT</a></li>
+                    <li class="nav-link"><a href = "#">BLOG</a></li>
+                    <div class="login-btn-div">
+                        <li class="nav-button"><button class="loginbtn" onClick="goToLoginPage()" style="width:auto;">lOG IN/ SIGN UP</button></li>
+                    </div>
+                    </div>
+            </ul>
+        </div>
+        </div>
+
+            <div id="login-form" >
+                
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id='btn'></div>
+                        <button type='button' onclick='login()' class='toggle-btn toggle-btn1'>Log In </button>
+                        <button type='button' onclick='register()' class='toggle-btn toggle-btn2'>Register</button>
+                       
+                    </div>
+                    <form id='login' class='input-group-login'>
+                        <input type="text" class="input-field" placeholder="Email ID" required>
+                        
+                        <input type="password" class="input-field" placeholder="Enter password" required> 
+                        <input type="checkbox" class="check-box"> <span class="check-box-text">Remember Password</span> 
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <form id="register" class="input-group-register">
+                        <input type="text" class="input-field" placeholder="first name" required>
+                        <input type="text" class="input-field" placeholder="last name" required>
+                        <input type="email" class="input-field" placeholder="Email Address" required>
+                        
+                        <input type="tel" class="input-field" placeholder="Phone number" required>
+                        <input type="text" class="input-field" placeholder="Home address" required>
+                        <input type="text" class="input-field" placeholder="Enter password" required>
+                        <input type="text" class="input-field" placeholder="confirm password" required>
+                        <input type="checkbox" class="check-box"> <span class="check-box-text">i agree to the terms and conditions</span>
+                        <button type="submit" class="submit-btn">Register</button> 
+                    </form>
+                   
+                </div>
+        </div>
+    </section>
+    
+</div>
+<div class="footer">
+    <p><small>
+        © 2021
+        copyright group 10 csb</small></p>
+</div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        
+        var z=document.getElementById('btn');
+        function login(){
+            x.style.left= "50px";
+            y.style.left= "650px";
+            x.style.color = "blue";
+            z.style.left= "0";
+        }
+        function register(){
+            x.style.left= "6500px";
+            
+            y.style.left= "50px";
+            
+            z.style.left= "105px";
+        }
+        
+       
+        
+    </script>
+    <script>
+         var load = document.getElementById("loading");
+        function loadfun(){
+            load.style.display = "none";
+        }
+        var modal= document.getElementById('login-form');
+        window.onclick= function(event)
+        {
+            if (event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn1')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content1");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    var load = document.getElementById("loading");
+    function loadfun(){
+        load.style.display = "none";
+    }
+    function goToHomePage(){
+            window.location="index.html";
+        }
+    </script>
+</body>
+</html>
